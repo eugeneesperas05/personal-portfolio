@@ -160,7 +160,7 @@ modalData.map((item) => {
 
   // image
   const createdImage = document.createElement("img");
-  createdImage.src = `./modal-images/${item.src}`;
+  createdImage.src = `modalimages/${item.src}`;
   createdImage.classList.add("modalImg");
   modal.appendChild(createdImage);
 
