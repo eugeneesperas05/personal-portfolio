@@ -92,52 +92,52 @@ closeBtn.addEventListener("click", () => {
 const newTab = "_blank";
 const modalData = [
   {
-    src: "pawfriend-template.png",
+    src: "pawfriend.png",
     title: "PawFriend",
     link: "https://eugeneesperas05.github.io/pawfriend/",
   },
   {
-    src: "pawfriend-template.png",
+    src: "pawfriend.png",
     title: "TravelPh",
     link: "https://eugeneesperas05.github.io/rockpaper/",
   },
   {
-    src: "pawfriend-template.png",
+    src: "pawfriend.png",
     title: "tictactoe",
     link: "https://eugeneesperas.github.io/",
   },
   {
-    src: "pawfriend-template.png",
+    src: "pawfriend.png",
     title: "PawFriend",
     link: "https://eugeneesperas05.github.io/fakestoreapi/",
   },
   {
-    src: "pawfriend-template.png",
+    src: "pawfriend.png",
     title: "TravelPh",
     link: "https://eugeneesperas05.github.io/eugeneesperas.github.io/",
   },
   {
-    src: "pawfriend-template.png",
+    src: "pawfriend.png",
     title: "tictactoe",
     link: "https://eugeneesperas05.github.io/personal-portfolio/",
   },
   {
-    src: "pawfriend-template.png",
+    src: "pawfriend.png",
     title: "PawFriend",
     link: "https://eugeneesperas05.github.io/personal-portfolio/",
   },
   {
-    src: "pawfriend-template.png",
+    src: "pawfriend.png",
     title: "TravelPh",
     link: "https://eugeneesperas05.github.io/personal-portfolio/",
   },
   {
-    src: "pawfriend-template.png",
+    src: "pawfriend.png",
     title: "tictactoe",
     link: "https://eugeneesperas05.github.io/personal-portfolio/",
   },
   {
-    src: "pawfriend-template.png",
+    src: "pawfriend.png",
     title: "PawFriend",
     link: "https://eugeneesperas05.github.io/personal-portfolio/",
   },
@@ -161,6 +161,7 @@ modalData.map((item) => {
   // image
   const createdImage = document.createElement("img");
   createdImage.src = `modalimages/${item.src}`;
+  console.log(createdImage);
   createdImage.classList.add("modalImg");
   modal.appendChild(createdImage);
 
@@ -170,7 +171,7 @@ modalData.map((item) => {
   pTitle.classList.add("modalP");
   modal.appendChild(pTitle);
 
-  console.log(item);
+  // console.log(item);
 });
 
 const btnProject = document.querySelector("#btn-project");
