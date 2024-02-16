@@ -89,60 +89,78 @@ closeBtn.addEventListener("click", () => {
 // end of about me tabs for skills
 
 // start of portfolio popUp see more button
-
+const newTab = "_blank";
 const modalData = [
   {
     src: "pawfriend-template.png",
     title: "PawFriend",
+    link: "https://eugeneesperas05.github.io/pawfriend/",
   },
   {
     src: "pawfriend-template.png",
     title: "TravelPh",
+    link: "https://eugeneesperas05.github.io/rockpaper/",
   },
   {
     src: "pawfriend-template.png",
     title: "tictactoe",
+    link: "https://eugeneesperas.github.io/",
   },
   {
     src: "pawfriend-template.png",
     title: "PawFriend",
+    link: "https://eugeneesperas05.github.io/fakestoreapi/",
   },
   {
     src: "pawfriend-template.png",
     title: "TravelPh",
+    link: "https://eugeneesperas05.github.io/eugeneesperas.github.io/",
   },
   {
     src: "pawfriend-template.png",
     title: "tictactoe",
+    link: "https://eugeneesperas05.github.io/personal-portfolio/",
   },
   {
     src: "pawfriend-template.png",
     title: "PawFriend",
+    link: "https://eugeneesperas05.github.io/personal-portfolio/",
   },
   {
     src: "pawfriend-template.png",
     title: "TravelPh",
+    link: "https://eugeneesperas05.github.io/personal-portfolio/",
   },
   {
     src: "pawfriend-template.png",
     title: "tictactoe",
+    link: "https://eugeneesperas05.github.io/personal-portfolio/",
   },
   {
     src: "pawfriend-template.png",
     title: "PawFriend",
+    link: "https://eugeneesperas05.github.io/personal-portfolio/",
   },
 ];
 
 modalData.map((item) => {
   const modalContainer = document.querySelector(".modal-content-container");
 
-  // new div for modal
+  // new ahref for modal
+  const modalLink = document.createElement("a");
+  modalLink.href = item.link;
+  modalLink.classList.add("modal-link");
+  modalContainer.appendChild(modalLink);
+
+  // modal div inside the anchor
   const modal = document.createElement("div");
   modal.classList.add("modal");
-  modalContainer.appendChild(modal);
-  // images
+  modalLink.setAttribute("target", newTab);
+  modalLink.appendChild(modal);
+
+  // image
   const createdImage = document.createElement("img");
-  createdImage.src = `modal-images/${item.src}`;
+  createdImage.src = `./modal-images/${item.src}`;
   createdImage.classList.add("modalImg");
   modal.appendChild(createdImage);
 
@@ -162,7 +180,7 @@ const popupModal = document.querySelector(".popup-container");
 btnProject.addEventListener("click", () => {
   popupModal.style.display = "block";
   document.body.style.overflow = "hidden";
-  body.style.display = "none";
+  // body.style.display = "none";
 });
 
 btnX.addEventListener("click", () => {
