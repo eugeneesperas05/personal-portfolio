@@ -88,8 +88,10 @@ nav ul li a:hover::after {
   cursor: pointer;
 }
 .header-text {
-  margin-top: 20%;
+  margin: 12% auto auto 15%;
   font-size: 30px;
+  border-left: 5px solid #68f6ff;
+  padding-left: 10px;
 }
 
 .header-text p {
@@ -98,7 +100,7 @@ nav ul li a:hover::after {
 
 .header-text h1 {
   font-size: 60px;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .header-text h1 span {
@@ -115,6 +117,7 @@ nav ul li a:hover::after {
   justify-content: center;
   color: #fff;
   background: #0f0f0fe5;
+  position: relative;
 }
 .row {
   display: flex;
@@ -148,6 +151,13 @@ nav ul li a:hover::after {
   text-indent: 40px;
   margin-top: 20px;
   line-height: 30px;
+  text-align: justify;
+}
+
+.about-p #certificate-btn {
+  text-decoration: underline #fff;
+  color: #68f6ff;
+  cursor: pointer;
 }
 
 .p-Bnt {
@@ -162,7 +172,42 @@ nav ul li a:hover::after {
 .see-more {
   display: none;
   margin-top: 20px;
-  text-align: justify;
+}
+
+.cert-container {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 6;
+}
+.sub-certificate-cont {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#close {
+  font-size: 60px;
+  color: rgb(247, 125, 125);
+  transition: 0.3s;
+  position: absolute;
+  right: 15%;
+  top: 10%;
+}
+#close:hover {
+  color: red;
+  text-shadow: 1px 1px 20px #6edee7;
+}
+
+.sub-certificate-cont img {
+  width: 60%;
 }
 
 .tab-titles {
@@ -278,13 +323,16 @@ nav ul li a:hover::after {
 }
 
 .work {
+  width: 80%;
+  height: auto;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
 }
 
 .work img {
-  width: 100%;
+  max-width: 100%;
+  height: auto-fit;
   border-radius: 10px;
   display: block;
   transition: transform 0.5s;
@@ -352,34 +400,81 @@ nav ul li a:hover::after {
   background: #10abb6;
 }
 
-.popUp-container {
+/* --- modal see more button ----- */
+.popup-container {
+  display: none;
   display: none;
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100%;
+  height: 100%;
+  background: #000;
   z-index: 5;
 }
-
-.popUp {
-  background: #262626;
-  padding: 50px;
+.modal-content {
+  width: 100%;
+  background: #000;
+  height: 100vh;
 }
-.popUp h1 {
-  font-size: 6rem;
+.modal-content h1 {
+  font-size: 2.5rem;
+  color: #fff;
   text-align: center;
+  padding: 40px 0;
 }
-
-#btn-hide {
-  font-size: 2rem;
+#x-btn {
+  font-size: 3rem;
+  color: #f55454;
   position: absolute;
   right: 3%;
-  margin: 5px 0;
+  top: 3%;
+  padding: 20px;
 }
-#btn-hide:hover {
-  color: #c03e0f;
-  text-shadow: 0 0 10px #68f6ff;
+#x-btn:hover {
+  color: #f82e2e;
+  text-shadow: 0 0 10px #ffffff;
+}
+.modal-content-container {
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 0 3% 0 3%;
+  background: #000;
+}
+
+.modal {
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-self: center;
+  color: #fff;
+  background: #085761;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 5px 5px 20px #8a8888;
+  transition: 0.3s;
+}
+
+.modal:hover {
+  box-shadow: 11px 11px 30px #68f6ff;
+  cursor: pointer;
+  transform: translateY(-10px);
+  border: 1px solid #000;
+}
+
+.modal .modalImg {
+  border-radius: 10px 10px 0 0;
+}
+
+.modal .modalP {
+  padding: 15px;
+  font-weight: bold;
+  color: #fff;
 }
 
 /* --------contact--------- */
@@ -474,26 +569,26 @@ form .btn2 {
 
 @keyframes fadeInOut {
   0% {
-    color: #048c96;
+    color: rgb(65, 177, 177);
   }
 
   20% {
-    color: #10abb6;
+    color: rgba(65, 177, 177, 0.719);
   }
 
   40% {
-    color: #36d3de;
+    color: rgba(65, 177, 177, 0.555);
   }
 
   60% {
-    color: #6edee7;
+    color: rgba(65, 177, 177, 0.377);
   }
 
   80% {
-    color: #95e2e8;
+    color: rgba(65, 177, 177, 0.247);
   }
 
   100% {
-    color: rgb(210, 244, 247);
+    color: rgba(65, 177, 177, 0.144);
   }
 }

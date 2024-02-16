@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/abb6e20c2f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Modal for portfolio</title>
+
+    <style>
+      /* --- modal see more button ----- */
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .popup-container {
+        width: 100%;
+        height: auto;
+        background-color: #383737;
+      }
+      .modal-content {
+        width: 100%;
+        height: 100vh;
+      }
+      .modal-content h1 {
+        font-size: 2.5rem;
+        color: #fff;
+        text-align: center;
+        padding: 40px 0;
+      }
+      #x-btn {
+        font-size: 3rem;
+        color: #f55454;
+        position: absolute;
+        right: 3%;
+        top: 5%;
+        padding: 20px;
+      }
+      #x-btn:hover {
+        color: #f82e2e;
+        text-shadow: 0 0 10px #ffffff;
+      }
+      .modal-content-container {
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        padding: 0 3% 0 3%;
+        background-color: #383737;
+      }
+
+      .modal {
+        width: 300px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-self: center;
+        border: 1px solid #000;
+        color: #fff;
+        background: #085761;
+        box-shadow: 12px 12px 5px 1px #fff;
+        border-radius: 10px 10px 0 0;
+        margin-bottom: 2rem;
+      }
+      .modal .modalImg {
+        border-radius: 10px 10px 0 0;
+      }
+
+      .modal .modalP {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="popup-container">
+      <div class="modal-content">
+        <h1>My Projects in Learning Web Development</h1>
+        <i class="fa-solid fa-circle-xmark" id="x-btn" title="Close"></i>
+        <div class="modal-content-container">
+          <!-- dynamically added -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const modalData = [
+        {
+          src: "pawfriend-template.png",
+          title: "PawFriend",
+        },
+        {
+          src: "pawfriend-template.png",
+          title: "TravelPh",
+        },
+        {
+          src: "pawfriend-template.png",
+          title: "tictactoe",
+        },
+        {
+          src: "pawfriend-template.png",
+          title: "PawFriend",
+        },
+        {
+          src: "pawfriend-template.png",
+          title: "TravelPh",
+        },
+        {
+          src: "pawfriend-template.png",
+          title: "tictactoe",
+        },
+        {
+          src: "pawfriend-template.png",
+          title: "PawFriend",
+        },
+        {
+          src: "pawfriend-template.png",
+          title: "TravelPh",
+        },
+        {
+          src: "pawfriend-template.png",
+          title: "tictactoe",
+        },
+        {
+          src: "pawfriend-template.png",
+          title: "PawFriend",
+        },
+        {
+          src: "pawfriend-template.png",
+          title: "TravelPh",
+        },
+        {
+          src: "pawfriend-template.png",
+          title: "tictactoe",
+        },
+      ];
+
+      modalData.map((item) => {
+        const modalContainer = document.querySelector(
+          ".modal-content-container"
+        );
+
+        // new div for modal
+        const modal = document.createElement("div");
+        modal.classList.add("modal");
+        modalContainer.appendChild(modal);
+        // images
+        const createdImage = document.createElement("img");
+        createdImage.src = `modal-images/${item.src}`;
+        createdImage.classList.add("modalImg");
+        modal.appendChild(createdImage);
+
+        // title p
+        const pTitle = document.createElement("p");
+        pTitle.textContent = item.title;
+        pTitle.classList.add("p");
+        modal.appendChild(pTitle);
+
+        console.log(item);
+      });
+
+      // start of portfolio popUp see more button
+      const btnProject = document.querySelector("#btn-project");
+      const btnX = document.querySelector("#x-btn");
+      const popupModal = document.querySelector(".popup-modal");
+
+      btnProject.addEventListener("click", () => {
+        popupModal.style.display = "block";
+        body.style.display = "none";
+      });
+
+      btnX.addEventListener("click", () => {
+        popupModal.style.display = "none";
+        body.style.display = "block";
+      });
+      // end of portfolio popUp see more button
+    </script>
+  </body>
+</html>

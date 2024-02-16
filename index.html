@@ -12,7 +12,7 @@
     <div class="container">
       <nav>
         <img src="images/uu.png" class="logo"></img>
-          <ul>
+          <ul class="nav-li">
             <li><a href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
@@ -21,8 +21,9 @@
           </ul>
       </nav>
       <div class="header-text">
+        <h1>I'm</h1>
+        <h1><span>Eugene</span> Esperas</h1>
         <p>Web Developer</p>
-        <h1>Hi, I'm <span>Eugene</span><br>Esperas</h1>
       </div>
     </div>
   </div>
@@ -37,15 +38,26 @@
         </div>
         <div class="about-col-2">
           <h1 class="sub-title">About Me</h1>
-          <p class="about-p">I graduated from Tarlac State University with a Bachelor of Science in Information Technology in 2017. Following my graduation, I embarked on my professional journey, beginning as a Customer Service Representative at Sutherland Global Services for a period of 3 months. Subsequently, I transitioned to a role as an IT Support Specialist at Zantua's General Merchandising, where I dedicated nearly 5 years of my career. 
+          <p class="about-p">
+            I graduated from Tarlac State University with a Bachelor of Science in Information Technology in 2017. Following my graduation, I embarked on my professional journey, beginning as a Customer Service Representative at Sutherland Global Services for a period of 3 months. Subsequently, I transitioned to a role as an IT Support Specialist at Zantua's General Merchandising, where I dedicated nearly 5 years of my career. 
             <span class="see-more">During my tenure, I acquired extensive knowledge in computer hardware and software, as well as foundational skills in networking.
-              Driven by my aspiration to become a proficient programmer, I enrolled in KoDego Bootcamp, where I completed an intensive 3-month program. Throughout this bootcamp, I delved into various programming languages and technologies including JavaScript, HTML, CSS, SQL, Bootstrap, as well as gained exposure to basic concepts in React and Laravel.
+              Driven by my aspiration to become a proficient programmer, I enrolled in <span id="certificate-btn">KodeGo Bootcamp</span>, where I completed an intensive 3-month program. Throughout this bootcamp, I delved into various programming languages and technologies including JavaScript, HTML, CSS, SQL, Bootstrap, as well as gained exposure to basic concepts in React and Laravel.
               Upon completion of the bootcamp, I remained committed to expanding my skill set and pursued independent learning initiatives to further refine my expertise. My ultimate goal is to establish myself as a competent web developer, leveraging my accumulated knowledge and experiences to contribute effectively to the field.
             <br>
           <button id="less-btn" class="p-Bnt">Show less</button>
             </span>
           </p>
           <button id="more-btn" class="p-Bnt">See more</button>
+          <!-- --for my certificate div initially display:none-- -->
+          
+          <div class="cert-container">
+            <div class="sub-certificate-cont">
+              <i class="fa-solid fa-circle-xmark" id="close" title="Close"></i>
+              <img src="images/certi.png" alt="certificate">
+            </div>
+          </div>
+
+
           <div class="tab-titles">
             <p class="tab-links active-link" onclick="openTab('skills')">Skill</p>
             <p class="tab-links" onclick="openTab('experience')">Experience</p>
@@ -62,18 +74,17 @@
 
           <div class="tab-contents" id="experience">
             <ul>
-              <li><span>2021 - Current<br></span>Web designer/App interface</li>
-              <li><span>2019 - 2021<br></span>Web designer/App interface</li>
-              <li><span>2017 - 2019<br></span>Web designer/App interface</li>
-              <li><span>2016 - 2017<br></span>Web designer/App interface</li>
+              <li><span>TravelPh / Final Project<br></span>Laravel/HTML/CSS/JavaScript/Bootstrap 5</li>
+              <li><span>TravelPh / Capstone<br></span>ReactJs/HTML/CSS/JavaScript/Bootstrap</li>
+              <li><span>PawFriend / First Project<br></span>HTML/CSS/JavaScript/Bootstrap 5</li>
             </ul>
           </div>
 
           <div class="tab-contents" id="education">
             <ul>
-              <li><span>UI/UX<br></span>Web designer/App interface</li>
-              <li><span>Web Development<br></span>Web designer/App interface</li>
-              <li><span>App Development<br></span>Web designer/App interface</li>
+              <li><span>Tarlac State University<br></span>BSIT / 2013-2017</li>
+              <li><span>KodeGo Bootcamp<br></span>Full Stack Developer / 3 Months</li>
+              <li><span>Tesda / Rotary Club<br></span>Computer Hardware Servicing / 2015</li>
             </ul>
           </div>
 
@@ -145,36 +156,14 @@
         <button class="btn" id="btn-project">See More</button>
         
       </div>
-      <div class="popUp-container">
-        <div class="popUp">
-          <!-- added this to show my modal for projects -->
-          <i class="fa-solid fa-circle-xmark" id="btn-hide" title="Close"></i>
-          <div class="work-list">
-            <div class="work">
-              <img src="images/work-1.png" alt="">
-              <div class="layer">
-                <h3>Social Media App</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo ad eos, aperiam ea velit.</p>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              </div>
-            </div>
-            <div class="work">
-              <img src="images/work-2.png" alt="">
-              <div class="layer">
-                <h3>Social Media App</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo ad eos, aperiam ea velit.</p>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              </div>
-            </div>
-            <div class="work">
-              <img src="images/work-3.png" alt="">
-              <div class="layer">
-                <h3>Social Media App</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo ad eos, aperiam ea velit.</p>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              </div>
-            </div>
-          </div>
+      </div>
+      <!-- ----modal to be display:block when see more btn is click--- -->
+      <div class="popup-container">
+      <div class="modal-content">
+        <h1>My Projects in Learning Web Development</h1>
+        <i class="fa-solid fa-circle-xmark" id="x-btn" title="Close"></i>
+        <div class="modal-content-container">
+          <!-- added here dynamically -->
         </div>
       </div>
     </div>
@@ -209,15 +198,7 @@
     </div>
    </div>
 
-
-
-
-
-
-
-
-
-
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="index.js"></script>
 </body>
 </html>
